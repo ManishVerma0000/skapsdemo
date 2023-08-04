@@ -1,0 +1,135 @@
+/* .heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.safetydisplay {
+    font-size: 100px;
+    color: black;
+    background-color: blue;
+}
+
+.skapsheading {
+    font-size: 100px;
+    color: black;
+
+}
+
+.contentdiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 100px;
+    background-color: blue;
+}
+
+.currentdate {
+
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.lastaccidenton {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 80px;
+    background-color: blue;
+}
+
+.titlelastaccident {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+} */
+
+.innerimagetag {
+    height: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.skapstext {
+
+    font-size: 80px;
+}
+
+.midsection {
+    /* background-color: blue; */
+    /* color: white; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.safetyinformation {
+    font-size: 80px;
+}
+
+.todaydate {
+
+    font-size: 80px;
+}
+
+.localtimestring {
+    font-size: 80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+}
+.midsectionmid{
+    background-color: blue;
+}
+.latesttime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lastaccidenton {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lastaccidenttext {
+    font-size: 80px;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.helmet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+
+    font-size: 80px;
+}
