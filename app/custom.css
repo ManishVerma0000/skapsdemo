@@ -1,59 +1,13 @@
-/* .heading {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 2px solid black;
-}
-
-.safetydisplay {
-    font-size: 100px;
-    color: black;
-    background-color: blue;
-}
-
-.skapsheading {
-    font-size: 100px;
-    color: black;
-
-}
-
-.contentdiv {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 100px;
-    background-color: blue;
-}
-
-.currentdate {
-
-    border: 2px solid black;
-    background-color: black;
-    color: white;
-}
-
-.footer {
+.imagefile {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
+    height: 200px;
 }
 
-.lastaccidenton {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 80px;
-    background-color: blue;
+.maincontainer {
+    /* background-color: yellow; */
 }
-
-.titlelastaccident {
-    border: 2px solid black;
-    background-color: black;
-    color: white;
-} */
 
 .innerimagetag {
     height: 200px;
@@ -61,14 +15,36 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    background-color: #E0E0E0;
+}
 
+.inputbox {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skapstext {
 
-    font-size: 80px;
+    font-size: 50px;
+}
+
+
+.linedivtag {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.btnfileupload {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .midsection {
@@ -81,24 +57,28 @@
 }
 
 .safetyinformation {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .todaydate {
 
-    font-size: 80px;
+    font-size: 50px;
+    margin-left: 50px;
 }
 
 .localtimestring {
-    font-size: 80px;
-    display:flex;
-    justify-content: center;
+    font-size: 50px;
+    display: flex;
+    /* justify-content: center; */
     align-items: center;
+    margin-right: 30px;
     /* padding: 50px; */
 }
-.midsectionmid{
-    background-color: blue;
+
+.midsectionmid {
+    background-color: yellow;
 }
+
 .latesttime {
     display: flex;
     justify-content: space-between;
@@ -113,7 +93,8 @@
 }
 
 .lastaccidenttext {
-    font-size: 80px;
+    font-size: 50px;
+    margin-left: 50px;
 }
 
 .footer {
@@ -130,6 +111,5 @@
     justify-content: center;
     align-items: center;
     color: red;
-
-    font-size: 80px;
+    font-size: 70px;
 }

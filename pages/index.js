@@ -4,43 +4,38 @@ import axios from "axios";
 
 
 const MainComponent = () => {
+    var newcurrentdate = []
+    var newprevious = []
     const [currentDate, setCurrentDate] = useState('')
     const [lastaccidentdate, setlastaccidentdate] = useState('')
     const [accidentfreedays, setAccidentFreedays] = useState('')
+    const [previous, setprevious] = useState('')
+    const [quotes, setQuotes] = useState('')
 
     const refreshInterval = setInterval(() => {
-        // Reload the page every 1 hour (3600000 milliseconds)
         if (typeof window !== 'undefined') {
+
             window.location.reload();
         }
-    }, 36000);
-    // refreshInterval()
-    clearInterval(refreshInterval);
+    }, 360000);
+    if (currentDate) {
+        newcurrentdate = currentDate.replaceAll("/", "-")
+        newprevious = lastaccidentdate.replaceAll('""', "")
+
+    }
+
+
     useEffect(() => {
-        axios.get("http://localhost:5000/data").then((data) => {
-            console.log(data)
+        axios.get("http://192.168.4.88:5001/data").then((data) => {
+            setprevious(data.data.data.accidentfress)
             setCurrentDate(data.data.data.currentdate)
             setlastaccidentdate(data.data.data.lastaccidentdate)
             setAccidentFreedays(data.data.data.dayswithoutaccident)
+            setQuotes(data.data.data.quotes)
         }).catch((err) => {
             console.log(err)
         })
     })
-    // const apihit = () => {
-    //     axios.get("http://localhost:5000/data").then(async (data) => {
-    //         // console.log(data)
-    //         await setCurrentDate(data.data.data.currentdate)
-    //         await setlastaccidentdate(data.data.data.lastaccidentdate)
-    //         await setAccidentFreedays(data.data.data.dayswithoutaccident)
-    //     }).catch((err) => {
-    //         console.log(err)
-    //     })
-    // }
-
-    // setInterval(
-    //     apihit, 1000 * 60 * 60 * 24)
-
-
     return (
         <>
             <div className="maincontainer">
@@ -49,46 +44,42 @@ const MainComponent = () => {
                         <div className="imagetag">
                             <img src="https://skaps.com/wp-content/uploads/2023/02/SkapsLogo_300px-243x300.png" className="innerimagetag"></img>
                         </div>
-                        <div className="skapstext">
+                        <div className="skapstext" style={{ fontWeight: "bold", fontSize: 70 }}>
                             SKAPS Industries India  Pvt Ltd
                         </div>
                     </header>
                     <div className="midsectionmid">
                         <div className="midsection">
-                            <div className="safetyinformation">
+                            <div className="safetyinformation" style={{ fontWeight: "bold", fontSize: 50 }}>
                                 SAFETY INFORMATION DISPLAY
                             </div>
-
                         </div>
+                        <div className="linedivtag"></div>
                         <div className="latesttime">
-                            <div className="todaydate">
+                            <div className="todaydate" style={{ fontWeight: "bold", fontSize: 50 }} >
                                 TODAY'S DATE
-
                             </div>
+
                             <div className="localtimestring">
                                 {
-                                    currentDate
+                                    newcurrentdate
                                 }
-                                {/* {new Date().toLocaleDateString()} */}
                             </div>
                         </div>
+                        {/* <div className="linedivtag"></div> */}
 
                         <div className="lastaccidenton">
-
-                            <div className="lastaccidenttext">
+                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
                                 LAST ACCIDENT ON
                             </div>
                             <div className="localtimestring">
-                                {/* {date} */}
                                 {
                                     lastaccidentdate
                                 }
                             </div>
                         </div>
-
                         <div className="lastaccidenton">
-
-                            <div className="lastaccidenttext">
+                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
                                 ACCIDENT FREE DAYS
                             </div>
                             <div className="localtimestring">
@@ -97,29 +88,26 @@ const MainComponent = () => {
                                 }
                             </div>
                         </div>
-
                         <div className="lastaccidenton">
-
-                            <div className="lastaccidenttext">
-                                PREVIOUS BEST
+                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
+                                PREVIOUS BEST DAYS
                             </div>
                             <div className="localtimestring">
-                                109
+                                {
+                                    previous
+                                }
                             </div>
                         </div>
-
                     </div>
                     <footer className="footer">
                         <div className="helmet">
-                            WEAR HELMET
+                            {
+                                quotes
+                            }
                         </div>
                     </footer>
-
-
                 </div>
-
             </div>
-
         </>
     )
 }
