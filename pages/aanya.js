@@ -25,7 +25,7 @@ const MainComponent = () => {
 
 
     useEffect(() => {
-        axios.get("http://192.168.4.88:5001/data").then((data) => {
+        axios.get("http://192.168.4.88:5001/aanya").then((data) => {
             setprevious(data.data.data.accidentfress)
             setCurrentDate(data.data.data.currentdate)
             setlastaccidentdate(data.data.data.lastaccidentdate)
@@ -41,19 +41,18 @@ const MainComponent = () => {
                 <div className="headerofcontainer">
                     <header className="header">
                         <div className="imagetag" style={{ margin: 20 }}>
-                            <img src="/skaps.png" className="innerimagetag"></img>
+                            <img src="/aanya.jpg" className="innerimagetag"></img>
                         </div>
-                        <div className="skapstext" style={{ marginRight: 200 }}>
+                        <div className="skapstext" style={{ marginRight: 300 }}>
                             <div>
-                                SKAPS Industries India  Pvt. Ltd.
+                                Aanya Composites Pvt. Ltd.
                             </div>
 
                         </div>
                     </header>
 
-
                     <div className="midsection" style={{ backgroundColor: "yellow" }}>
-                        <div className="safetyinformation" style={{ fontWeight: "bold", fontSize: 70, }}>
+                        <div className="safetyinformation" style={{ fontWeight: "bold", fontSize: 80, }}>
                             SAFETY INFORMATION DISPLAY
                         </div>
                     </div>

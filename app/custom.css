@@ -13,9 +13,23 @@
     height: 200px;
 }
 
+.tablecontent {
+    border: 10px solid black;
+
+}
+
+.tableheight {
+    height: auto;
+    width: 100vw;
+}
+
+.tabedata {
+    height: 50px;
+}
+
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #E0E0E0;
 }
@@ -28,8 +42,15 @@
 }
 
 .skapstext {
+    font-weight: bold;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 
-    font-size: 50px;
+    /* fontWeight: "bold", fontSize: 70, marginRight: 200
+    font-size: 50px; */
 }
 
 
@@ -47,17 +68,23 @@
 
 }
 
+.midsectionbetweenheader {
+    background-color: #E0E0E0;
+    height: 50px;
+    width: 100%;
+}
+
 .midsection {
     /* background-color: blue; */
     /* color: white; */
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .safetyinformation {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .todaydate {
@@ -99,11 +126,17 @@
 
 .footer {
     background-color: black;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+
+.footerabovediv {
+    height: 50px;
+    width: 100%;
+    background-color: #E0E0E0;
 }
 
 .helmet {
@@ -112,4 +145,21 @@
     align-items: center;
     color: red;
     font-size: 70px;
+}
+
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
 }

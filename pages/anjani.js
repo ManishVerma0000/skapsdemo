@@ -4,6 +4,7 @@ import axios from "axios";
 
 
 const MainComponent = () => {
+
     var newcurrentdate = []
     var newprevious = []
     const [currentDate, setCurrentDate] = useState('')
@@ -23,9 +24,8 @@ const MainComponent = () => {
 
     }
 
-
     useEffect(() => {
-        axios.get("http://192.168.4.88:5001/data").then((data) => {
+        axios.get("http://192.168.4.88:5001/anjani").then((data) => {
             setprevious(data.data.data.accidentfress)
             setCurrentDate(data.data.data.currentdate)
             setlastaccidentdate(data.data.data.lastaccidentdate)
@@ -37,15 +37,15 @@ const MainComponent = () => {
     })
     return (
         <>
-            <div className="maincontainer">
+            <div className="maincontainer" style={{ padding: 20 }} >
                 <div className="headerofcontainer">
                     <header className="header">
                         <div className="imagetag" style={{ margin: 20 }}>
-                            <img src="/skaps.png" className="innerimagetag"></img>
+                            <img src="/anjani.jpg" className="innerimagetag"></img>
                         </div>
-                        <div className="skapstext" style={{ marginRight: 200 }}>
+                        <div className="skapstext" style={{ marginRight: 300 }}>
                             <div>
-                                SKAPS Industries India  Pvt. Ltd.
+                                Anjani Udyog Pvt. Ltd.
                             </div>
 
                         </div>
@@ -108,58 +108,7 @@ const MainComponent = () => {
                             </footer>
                         </div>
 
-
-
-
-                        {/* <div className="linedivtag"></div> */}
-                        {/* <div className="latesttime">
-                            <div className="todaydate" style={{ fontWeight: "bold", fontSize: 50 }} >
-                                TODAY'S DATE
-                            </div>
-
-                            <div className="localtimestring">
-                                {
-                                    newcurrentdate
-                                }
-                            </div>
-                        </div> */}
-                        {/* <div className="linedivtag"></div> */}
-
-                        {/* <div className="lastaccidenton">
-                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
-                                LAST ACCIDENT ON
-                            </div>
-                            <div className="localtimestring">
-                                {
-                                    lastaccidentdate
-                                }
-                            </div>
-                        </div> */}
-                        {/* <div className="lastaccidenton">
-                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
-                                ACCIDENT FREE DAYS
-                            </div>
-                            <div className="localtimestring">
-                                {
-                                    accidentfreedays
-                                }
-                            </div>
-                        </div> */}
-                        {/* <div className="lastaccidenton">
-                            <div className="lastaccidenttext" style={{ fontWeight: "bold", fontSize: 50 }}>
-                                PREVIOUS BEST DAYS
-                            </div>
-                            <div className="localtimestring">
-                                {
-                                    previous
-                                }
-                            </div>
-                        </div> */}
                     </div>
-
-                    {/* <div className="footerabovediv">
-                    </div> */}
-
 
                 </div>
             </div>
